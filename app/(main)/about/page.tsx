@@ -61,15 +61,32 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <div className=" relative max-w-5xl container flex items-center gap-0 overflow-hidden ">
-          <div className="w-lg h-[240px] relative">
-            <Image src={"/about/img-1.jpg"} alt={"about"} fill />
+        <div className="relative container lg:max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-4 lg:gap-0 overflow-hidden">
+          <div className="w-full md:w-1/3 h-[200px] md:h-[240px] relative">
+            <Image
+              src={"/about/img-1.jpg"}
+              alt={"about"}
+              fill
+              className="object-cover"
+            />
           </div>
-          <div className="w-xl h-[310px] relative">
-            <Image src={"/about/img-2.jpg"} alt={"about"} fill />
+
+          <div className="w-full md:w-1/3 h-[250px] md:h-[310px] relative">
+            <Image
+              src={"/about/img-2.jpg"}
+              alt={"about"}
+              fill
+              className="object-cover"
+            />
           </div>
-          <div className="w-lg h-[240px] relative">
-            <Image src={"/about/img-3.jpg"} alt={"about"} fill />
+
+          <div className="w-full md:w-1/3 h-[200px] md:h-[240px] relative">
+            <Image
+              src={"/about/img-3.jpg"}
+              alt={"about"}
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

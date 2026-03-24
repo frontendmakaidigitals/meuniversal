@@ -106,11 +106,11 @@ const Page = () => {
       <section className=" mt-20">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-2xl font-montserrat lg:text-4xl font-[400] text-gray-800">
+          <h2 className="text-4xl font-montserrat lg:text-4xl font-[400] text-gray-800">
             This is not a <span className="line-through">Brochure</span>.
           </h2>
 
-          <h3 className="text-xl lg:text-4xl font-montserrat mt-3">
+          <h3 className="text-4xl lg:text-4xl font-montserrat mt-3">
             It is{" "}
             <span className="underline text-indigo-600 font-medium">
               A LIVE ECOSYSTEM.
@@ -124,7 +124,13 @@ const Page = () => {
             src={"/sqm/collage.png"}
             alt={""}
             fill
-            className="object-contain"
+            className="object-contain hidden lg:block"
+          />
+          <Image
+            src={"/sqm/collage-mobile.png"}
+            alt={""}
+            fill
+            className="object-cover lg:hidden block"
           />
         </div>
       </section>
