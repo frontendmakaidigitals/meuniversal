@@ -121,7 +121,8 @@ const Header = () => {
       normalizedPath !== "/sustainability" &&
       normalizedPath !== "/per-sqm-concept" &&
       normalizedPath !== "/careers" &&
-      normalizedPath !== "/contact"
+      normalizedPath !== "/contact" &&
+      normalizedPath !== "/blogs"
     ) {
       setIsDark(true);
     } else {

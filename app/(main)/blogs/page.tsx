@@ -61,36 +61,49 @@ const Page = () => {
     <div className="min-h-screen bg-stone-50">
       {/* ── Header ── */}
       <header className="relative w-full overflow-hidden bg-stone-900">
-        {/* Background image with strong overlay */}
+        {/* Background */}
         <img
-          src="https://images.unsplash.com/photo-1476242906366-d8eb64c2f661?q=80&w=1469&auto=format&fit=crop"
+          src="/blogs.jpg"
           alt=""
           aria-hidden
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105"
+          style={{ objectPosition: "center 30%" }}
         />
 
-        {/* Gradient fade at bottom so content below feels connected */}
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-linear-to-b from-transparent  to-stone-500  " />
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-radial-[ellipse_80%_60%_at_50%_120%] from-transparent to-stone-400/30" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 lg:py-28 text-center">
+        {/* Bottom fade */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-stone-900" />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 lg:py-28">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span className="text-[0.7rem] font-semibold tracking-widest uppercase text-primary">
-              Latest News &amp; Articles
-            </span>
+          <div className="flex items-center gap-4 mb-10">
+            <span className="block h-px flex-1 bg-white/10" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm shrink-0">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-100" />
+              <span className="text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-purple-100">
+                Latest News &amp; Articles
+              </span>
+            </div>
+            <span className="block h-px flex-1 bg-white/10" />
           </div>
 
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-4">
-            Stories Worth Reading
-          </h1>
+          {/* Heading + subheading — centered, clean */}
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-3">
+              Our Blog
+            </h1>
+            <p className="text-stone-400 text-sm lg:text-base">
+              Thoughts, stories, and ideas from our team.
+            </p>
+          </div>
 
-          {/* Subtitle */}
-          <p className="text-stone-300 text-base lg:text-lg max-w-xl mx-auto leading-relaxed">
-            In-depth articles, guides, and insights from our team — updated
-            regularly.
-          </p>
+          {/* Bottom accent */}
+          <div className="mt-10 flex items-center gap-3">
+            <span className="block h-0.5 w-8 bg-primary rounded-full" />
+            <span className="block h-px flex-1 bg-white/10" />
+          </div>
         </div>
       </header>
 
@@ -184,14 +197,14 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
           {/* Category badge */}
-          <span className="absolute top-3 left-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.65rem] font-semibold tracking-wide uppercase bg-teal-600 text-white shadow-sm">
+          <span className="absolute top-3 left-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.65rem] font-semibold tracking-wide uppercase bg-primary text-white shadow-sm">
             {blog.category}
           </span>
         </div>
 
         {/* Body */}
         <div className="flex flex-col flex-1 p-4 gap-2">
-          <h3 className="font-semibold text-stone-900 leading-snug line-clamp-2 group-hover:text-teal-700 transition-colors">
+          <h3 className="font-semibold text-stone-900 leading-snug line-clamp-2 group-hover:text-primary/90 transition-colors">
             {blog.title}
           </h3>
 

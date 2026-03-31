@@ -145,7 +145,7 @@ html {
 .ContentEditable__root ol {
   margin-top: 0.25em !important; /* adjust to taste */
   margin-bottom: 0.25em; /* adjust to taste */
-  line-height: 1.4;
+  line-height: 1.1;
   list-style: disc;
 }
 
