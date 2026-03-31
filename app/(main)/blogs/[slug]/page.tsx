@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import BlogClient from "./BlogClient";
-import { dbGet, dbAll } from "@/lib/db";
+import { dbGet, dbAll } from "@/app/lib/db";
 import zlib from "zlib";
 
 type Blog = {
