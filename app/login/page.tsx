@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
-import Button from "@/App_Chunks/Button";
+import Button from "../App_Chunks/Button";
 import { Label } from "@/components/ui/label";
 import BgLayer from "@/components/BgLayer";
 const validEmail = "admin";
